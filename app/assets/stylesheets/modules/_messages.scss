@@ -4,7 +4,6 @@
 
 $btn-color: #38aef0;
 
-
 .side-bar {
   color: white;
   float: left;
@@ -49,15 +48,17 @@ $btn-color: #38aef0;
   &__group-list {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    &__title-box {
+    &__title-box__group {
       width: 100%;
       height: 87px;
       padding: 20px 20px 40px;
-      & h3 {
+      &__name {
+        color: white;
         font-size: 15px;
         margin-bottom: 5px;
       }
-      & p {
+      &__message {
+        color: white;
         font-size: 11px;
       }
     }
@@ -98,7 +99,7 @@ $btn-color: #38aef0;
         line-height: 40px;
         color: $btn-color;
         font-size: 16px;
-        & .group {
+        & .edit-btn {
           color: $btn-color;
           text-decoration: none;
         }

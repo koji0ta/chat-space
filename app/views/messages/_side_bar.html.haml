@@ -5,7 +5,7 @@
         = current_user.name
       .side-bar__user-name__top-items__icon
 
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('fas', 'edit', class: 'icon')
 
         = link_to edit_user_path(current_user) do
@@ -13,14 +13,13 @@
 
   .side-bar__group-list
     .side-bar__group-list__title-box
-      %h3 techcamp
-      %p まだメッセージがありません
-    .side-bar__group-list__title-box
-      %h3 techcamp
-      %p まだメッセージがありません
-    .side-bar__group-list__title-box
-      %h3 techcamp
-      %p まだメッセージがありません
-  
+      - current_user.groups.each do |group|
+        .side-bar__group-list__title-box__group
+          = link_to edit_group_path(group.id) do
+            .side-bar__group-list__title-box__group__name
+              = group.name
+            .side-bar__group-list__title-box__group__message
+              まだメッセージがありません
+
 
 
