@@ -1,6 +1,5 @@
 $(function() {
-  function buildHTML(message) {
-  // 「もしメッセージに画像が含まれていたら」という条件式
+  function buildHTML(message) { 
   if (message.image) {
     var html = `<div class="chat-main__message--list">
                 <div class="chat-main__message--list__box__top">
@@ -53,9 +52,7 @@ $('.chat-main__message--form__text-box').on('submit', function(e){
       contentType: false
     })
     .done(function(message) {
-      console.log(message)
       var html = buildHTML(message);
-      // debugger
       $('.messages').append(html)
       $('.chat-main').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('form')[0].reset();
