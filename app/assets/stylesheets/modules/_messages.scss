@@ -5,6 +5,7 @@
 $btn-color: #38aef0;
 
 .side-bar {
+  overflow: scroll;
   color: white;
   float: left;
   width: 300px;
@@ -66,7 +67,9 @@ $btn-color: #38aef0;
 
 
 .chat-main {
+  overflow: scroll;
   & .messages {
+    
     padding-bottom: 120px;
   }
   float: right;

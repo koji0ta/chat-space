@@ -9,8 +9,11 @@ class MessagesController < ApplicationController
 
   def create
     @message = @group.messages.new(message_params)
-    if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージを送信しました'
+    if @message.save  # messageが保存されたら、即JSON形式で返す。これがないと、ふつうの通信になっちゃう
+      respond_to do |format|
+        format.json
+      end
+      
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
