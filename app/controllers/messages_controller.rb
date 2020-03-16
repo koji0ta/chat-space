@@ -8,7 +8,9 @@ class MessagesController < ApplicationController
 
 
   def create
+    # binding.pry
     @message = @group.messages.new(message_params)
+
     if @message.save  # messageが保存されたら、即JSON形式で返す。これがないと、ふつうの通信になっちゃう
       respond_to do |format|
         format.json
