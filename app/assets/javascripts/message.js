@@ -19,6 +19,7 @@ $(function() {
                       <img src="${message.image}" class="lower-message__image">
                     </div>
                   </div>`
+                  return html;
     } else if (message.body) {
       //同様に、data-idが反映されるようにしている
       var html = `<div class="message" data-message-id= ${message.id}>
@@ -36,6 +37,7 @@ $(function() {
                       </p>
                     </div>
                   </div>`
+                  return html;
     } else if (message.image) {
       //同様に、data-idが反映されるようにしている
       var html = `<div class="message" data-message-id= ${message.id}>
