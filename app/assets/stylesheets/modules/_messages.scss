@@ -10,15 +10,16 @@ $btn-color: #38aef0;
   float: left;
   width: 300px;
   height: 100vh;
-  background-color: #253141;
+  background-color: #2f3e51;
   &__user-name {
+    background-color: #253141;
     position: relative;
     height: 100px;
     &__top-items {
       position: absolute;
       height: 20px;
       width: 260px;
-      background-color: #333333;
+      background-color: #253141;
       margin: auto;
       top: 0;
       bottom: 0;
@@ -53,13 +54,16 @@ $btn-color: #38aef0;
       height: 87px;
       padding: 20px 20px 40px;
       &__name {
-        color: white;
-        font-size: 15px;
-        margin-bottom: 5px;
+          color: white;
+          font-size: 15px;
+          margin-bottom: 5px; 
       }
       &__message {
-        color: white;
-        font-size: 11px;
+          color: white;
+          font-size: 11px;
+      }
+      & .messageLink {
+        text-decoration: none;
       }
     }
   }
@@ -67,6 +71,7 @@ $btn-color: #38aef0;
 
 .chat-main {
   overflow: scroll;
+  background-color: #fafafa;
   & .messages {
     padding-bottom: 120px;
   }
