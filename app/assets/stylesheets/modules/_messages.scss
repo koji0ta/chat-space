@@ -69,12 +69,13 @@ $btn-color: #38aef0;
   }
 }
 
+
 .chat-main {
   overflow: scroll;
+  background-color: #fafafa;
   & .messages {
     padding-bottom: 120px;
     background-color: #fafafa;
-    // border-bottom: solid 1px #eee;
   }
   float: right;
   width: calc(100vw - 300px);
